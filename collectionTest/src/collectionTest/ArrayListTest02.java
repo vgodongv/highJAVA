@@ -1,3 +1,5 @@
+https://velog.io/@vgo_dongv/Java-equals%EC%99%80-hashCod-%EC%9E%AC%EC%A0%95%EC%9D%98
+
 package collectionTest;
 
 import java.util.ArrayList;
@@ -10,15 +12,15 @@ public class ArrayListTest02 {
 		
 		Scanner sc = new Scanner(System.in);
 //		
-//		System.out.println("ÀÌ¸§1À» ÀÔ·Â");
+//		System.out.println("ì´ë¦„1ì„ ì…ë ¥");
 //		String name1=sc.nextLine();
-//		System.out.println("ÀÌ¸§2À» ÀÔ·Â");
+//		System.out.println("ì´ë¦„2ì„ ì…ë ¥");
 //		String name2=sc.nextLine();
-//		System.out.println("ÀÌ¸§3À» ÀÔ·Â");
+//		System.out.println("ì´ë¦„3ì„ ì…ë ¥");
 //		String name3=sc.nextLine();
-//		System.out.println("ÀÌ¸§4À» ÀÔ·Â");
+//		System.out.println("ì´ë¦„4ì„ ì…ë ¥");
 //		String name4=sc.nextLine();
-//		System.out.println("ÀÌ¸§5À» ÀÔ·Â");
+//		System.out.println("ì´ë¦„5ì„ ì…ë ¥");
 //		String name5=sc.nextLine();
 //		
 //		
@@ -31,36 +33,36 @@ public class ArrayListTest02 {
 		
 		ArrayList<String> list = new ArrayList<>();
 		for(int i=1; i<5; i++){
-			System.out.println(i+"¹øÂ° »ç¶÷ ÀÌ¸§:");
+			System.out.println(i+"ë²ˆì§¸ ì‚¬ëŒ ì´ë¦„:");
 			String name = sc.next();
 			list.add(name);
 			
 		}
 		
 		for(int i=0; i<list.size(); i++){
-		if(list.get(i).charAt(0) =='±è'){
-			System.out.println("¼ºÀÌ ±è¾¾ÀÎ ÀÌ¸§:" + list.get(i));
+		if(list.get(i).charAt(0) =='ê¹€'){
+			System.out.println("ì„±ì´ ê¹€ì”¨ì¸ ì´ë¦„:" + list.get(i));
 		}
 		}
 		
 		System.out.println("-------------------------------------");
 		for(int i=0; i<list.size(); i++){
-		if(list.get(i).substring(0,1).equals("±è")){ //0,1ÀÎÀÌÀ¯´Â 1ÀÌ¾Æ´Ï¶ó 1¾Õ±îÁö¸¸ ÀÚ¸£±â¶§¹®!
-			System.out.println("¼ºÀÌ ±è¾¾ÀÎ ÀÌ¸§:" + list.get(i));
+		if(list.get(i).substring(0,1).equals("ê¹€")){ //0,1ì¸ì´ìœ ëŠ” 1ì´ì•„ë‹ˆë¼ 1ì•ê¹Œì§€ë§Œ ìë¥´ê¸°ë•Œë¬¸!
+			System.out.println("ì„±ì´ ê¹€ì”¨ì¸ ì´ë¦„:" + list.get(i));
 		}
 		}
 		
 		System.out.println("-------------------------------------");
 		for(int i=0; i<list.size(); i++){
-			if(list.get(i).indexOf("±è")==0){
-				System.out.println("¼ºÀÌ ±è¾¾ÀÎ ÀÌ¸§:" + list.get(i));
+			if(list.get(i).indexOf("ê¹€")==0){
+				System.out.println("ì„±ì´ ê¹€ì”¨ì¸ ì´ë¦„:" + list.get(i));
 			}
 			}
 		
 		System.out.println("-------------------------------------");
 		for(int i=0; i<list.size(); i++){
-			if(list.get(i).startsWith("±è")){
-				System.out.println("¼ºÀÌ ±è¾¾ÀÎ ÀÌ¸§:" + list.get(i));
+			if(list.get(i).startsWith("ê¹€")){
+				System.out.println("ì„±ì´ ê¹€ì”¨ì¸ ì´ë¦„:" + list.get(i));
 			}
 			}
 		
