@@ -58,8 +58,7 @@ public class PhoneBookTest {
 	 - 한 줄 단위로 입력한다. 즉 자료를 입력하고 Enter키를 누르면 Enter키까지 읽어간다.
 	 
 	 nextLine입력안했는데 넘어간것처럼 보이는 이유
-	 nextLine 쓰기전에  nextLine이 아닌 메서드들 사용후
-	 
+	 nextLine() 쓰기전에 nextLine()이 아닌 메서드들 사용후
 	 입력버퍼를 검사했더니 enter키 = 데이터가 남아있어서 그 enter키를 가져가서 사용한것..
 	 
 	 해결방법: nextLine직전에 scan.nextLine()을 한번 더써서 입력버퍼를 비워준다.
