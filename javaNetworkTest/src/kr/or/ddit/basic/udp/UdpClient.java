@@ -36,6 +36,7 @@ public class UdpClient {
 					break;
 				}
 				
+				
 				// 서버에서 보내온 메시지 받아서 출력하기
 				// 수신용 패킷객체 생성
 				inpacket = new DatagramPacket(bMsg, bMsg.length);
