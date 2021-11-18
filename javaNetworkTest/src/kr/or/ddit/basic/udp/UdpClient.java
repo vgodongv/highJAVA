@@ -20,12 +20,11 @@ public class UdpClient {
 			
 			// 접속할 곳의 주소를 생성한다.
 			InetAddress address = InetAddress.getByName("localhost");
-			
+			 
 			while(true){
 				// 전송할 메시지 입력
 				System.out.print("전송할 메시지 입력: ");
 				String msg = scan.nextLine();
-				
 				
 				// 전송할 패킷 객체 생성
 				outpacket = new DatagramPacket(msg.getBytes("utf-8"), msg.getBytes("utf-8").length, address, 8888 );
