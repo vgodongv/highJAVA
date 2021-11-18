@@ -48,10 +48,14 @@ public class UdpServer {
 				// 실제 데이터는 수신용 패킷객체에 지정한 byte형 배열에도 저장된다.
 				
 				// 방법1
-				// String msg = new String(bMsg, 0, inpacket.getLength());
+				// String msg = new String(bMsg, 0, inpacket.getLength()),"utf-8");
 				
 				// 방법2
-				String msg = new String(inpacket.getData(), 0, inpacket.getLength());
+				String msg = new String(inpacket.getData(), 0, inpacket.getLength(),"utf-8");
+				
+				if("/end".equals(msg)){
+					break;
+				}
 				
 				System.out.println("상대방이 보낸 메시지: "+ msg);
 				System.out.println();

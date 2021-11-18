@@ -26,14 +26,16 @@ public class UdpClient {
 				System.out.print("전송할 메시지 입력: ");
 				String msg = scan.nextLine();
 				
-				if("/end".equals(msg)){
-					break;
-				}
+				
 				// 전송할 패킷 객체 생성
 				outpacket = new DatagramPacket(msg.getBytes("utf-8"), msg.getBytes("utf-8").length, address, 8888 );
 				
 				// 전송
 				socket.send(outpacket);
+				
+				if("/end".equals(msg)){
+					break;
+				}
 				
 				// 서버에서 보내온 메시지 받아서 출력하기
 				// 수신용 패킷객체 생성
@@ -42,7 +44,7 @@ public class UdpClient {
 				// 수신
 				socket.receive(inpacket);
 				
-				System.out.println("서버의 응답 데이터: "+ new String(bMsg, 0, inpacket.getLength()) );
+				System.out.println("서버의 응답 데이터: "+ new String(bMsg, 0, inpacket.getLength(), "utf-8") );
 			}
 			
 			System.out.println("통신끝");
